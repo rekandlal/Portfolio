@@ -1,7 +1,7 @@
 // make the date/time dynamic : logic here
 function updateDateTime() {
   const now = new Date();
-  const formatted = now.toLocaleString('en-US', {
+  const formatted = now.toLocaleString('en-IN', {
     dateStyle: 'short',
     timeStyle: 'medium',
   });
