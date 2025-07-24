@@ -34,4 +34,14 @@ body {
     font-family: monospace;
 }
 
+.footer {
+  padding: 10px;
+  border-top: 2px solid #047857; 
+  background-color: black;
+  color: #22c55e; 
+  font-size: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
