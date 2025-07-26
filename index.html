@@ -1,28 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-
-    <!--css link-->
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Abhi's Terminal Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    
-    <!--top secrion (header)-->
-     <header class="header">
+  <div class="grid-container">
+    <!-- Left Side: 3D ID Card -->
+    <div id="canvas-container"></div>
+
+    <!-- Right Side: Terminal UI -->
+    <div class="terminal-container">
+      <header class="header">
         <h1 class="name">Abhishekh Vishwakarma</h1>
         <p class="role">Software Engineer</p>
-    </header>
+      </header>
 
-    <!-- Footer -->
-    <footer class="footer">
+      <div class="available-commands">
+        help | about | projects | skills | experience | contact | education | certifications | leadership | sudo | clear
+      </div>
+
+      <div class="command-history" id="history"></div>
+
+      <div class="command-input">
+        <span class="prompt">abhi@portfolio:~$</span>
+        <div class="fake-input">
+          <input id="terminal-input" type="text" autocomplete="off" autofocus />
+        </div>
+      </div>
+
+      <footer class="footer">
         <span>abhi@portfolio:~$</span>
         <span id="datetime">Loading...</span>
-    </footer>
+      </footer>
+    </div>
+  </div>
 
-    <!--script link-->
-    <script src = "script.js" ></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.176.0/build/three.min.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
