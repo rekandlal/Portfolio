@@ -1,0 +1,135 @@
+/* ===== Layout Container ===== */
+.grid-container {
+  display: flex;
+  height: 100vh;
+  background: black;
+  color: #22c55e;
+  font-family: monospace;
+}
+
+/* ===== Left: 3D ID Card ===== */
+#canvas-container {
+  width: 40%;
+  height: 100%;
+  background: black;
+}
+
+/* ===== Right: Terminal UI ===== */
+.terminal-container {
+  width: 60%;
+  padding: 1rem;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+/* ===== Header ===== */
+.header {
+  padding: 16px;
+  border-bottom: 2px solid #15803d;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .header {
+    text-align: left;
+  }
+}
+
+.name {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #22c55e;
+  margin: 0;
+  font-family: monospace;
+}
+
+.role {
+  font-size: 0.875rem;
+  color: #9ca3af;
+  margin: 6px 0 0 0;
+  font-family: monospace;
+}
+
+/* ===== Commands Toolbar ===== */
+.available-commands {
+  padding: 0.5rem 0;
+  font-size: 0.9rem;
+  border-bottom: 1px solid #047857;
+  color: #22c55e;
+  position: fixed;
+  top: 0;
+  left: 40%;
+  right: 0;
+  background: black;
+  z-index: 10;
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .available-commands {
+    display: block;
+  }
+}
+
+/* ===== Command History Area ===== */
+.command-history {
+  padding-top: 3rem;
+  flex-grow: 1;
+  overflow-y: auto;
+  color: white;
+}
+
+.command-line {
+  display: flex;
+  align-items: center;
+}
+
+.prompt {
+  color: #60a5fa; /* blue-400 */
+  margin-right: 0.5rem;
+}
+
+/* ===== Input Line ===== */
+.command-input {
+  display: flex;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.fake-input {
+  flex: 1;
+  position: relative;
+}
+
+#terminal-input {
+  width: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #22c55e;
+  font-family: monospace;
+  font-size: 1rem;
+}
+
+/* ===== Footer (Time + Prompt) ===== */
+.footer {
+  padding: 10px;
+  border-top: 2px solid #047857;
+  background-color: black;
+  color: #22c55e;
+  font-size: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* ===== Scrollbar Style (optional) ===== */
+.command-history::-webkit-scrollbar {
+  width: 6px;
+}
+.command-history::-webkit-scrollbar-thumb {
+  background-color: #15803d;
+  border-radius: 3px;
+}
